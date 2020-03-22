@@ -41,6 +41,9 @@ function call() {
         .catch( e=> {
             console.log(e)
         })
+
+        peerConnection.onaddstream = event => {
+        }
 }
 
 function receive() {
