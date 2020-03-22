@@ -1,0 +1,49 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script>
+    <script src="files/client.js"></script>
+
+    <style>
+        #localCam, #remoteCam {
+            background-color: aqua;
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <h1>Test</h1>
+
+    <div class="userField">
+        <h2>Online users</h2>
+        <ul id="userList"></ul>
+        <input type="text" name="userName" id="userName">
+        <button id="addUser" onclick="addUser()">Add user</button>    
+    </div>
+
+    <div class="messageField">
+        <h2>socket.io field</h2>
+
+        <ul id="si-msg"></ul>
+        <input type="text" name="msg1" id="msg1">
+        <button onclick="msg1()">msg1</button>
+    </div>
+
+    <div class="videos">
+        <h3>local</h3>
+        <video id="localCam"></video>
+        <button id="call" onclick="call()">call</button>
+        <h3>remote</h3>
+        <video id="remoteCam"></video>
+        <button id="receive" onclick="receive()">call</button>
+    </div>
+    
+</body>
+</html>
